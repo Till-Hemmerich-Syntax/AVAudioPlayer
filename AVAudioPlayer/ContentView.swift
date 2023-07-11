@@ -6,15 +6,65 @@
 //
 
 import SwiftUI
+import AVKit
+
 
 struct ContentView: View {
+    @ObservedObject var audioPlayer = AudioPlayer()
+    
     var body: some View {
         VStack {
-            Image(systemName: "globe")
-                .imageScale(.large)
-                .foregroundColor(.accentColor)
-            Text("Hello, world!")
+            Text("Music")
+                .font(.title)
+            Text("Sänger")
+                .font(.subheadline)
+            
+            ProgressView(value: audioPlayer.currentTime,total: (audioPlayer.player.currentItem?.duration.seconds)!)
+            HStack{
+                Text("\(audioPlayer.currentTime)")
+                    .font(.footnote)
+                Text("\(audioPlayer.totaltime)")
+                    .font(.footnote)
+                
+            }
+            HStack{
+                Image(systemName: "arrow.backward.circle")
+                    .font(.system(size: 30))
+                    .padding()
+                    .onTapGesture {
+                        audioPlayer.prev()
+                    }
+                Button(action: {
+                    audioPlayer.togglePlay()
+                }) {
+                    if audioPlayer.isPlaying {
+                        Image(systemName: "pause.circle.fill")
+                            .font(.system(size: 80))
+                            .padding()
+                    } else {
+                        Image(systemName: "play.circle.fill")
+                            .font(.system(size: 80))
+                            .padding()
+                    }
+                }
+               
+                Image(systemName: "arrow.forward.circle")
+                    .font(.system(size: 30))
+                    .padding()
+                    .onTapGesture {
+                        audioPlayer.next()
+                    }
+            }
+            
+            
+            Slider(value: $audioPlayer.volume)
+            
+            
+            
+            
+            
         }
+        
         .padding()
     }
 }

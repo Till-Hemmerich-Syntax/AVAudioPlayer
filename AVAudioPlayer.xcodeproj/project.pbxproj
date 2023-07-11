@@ -14,6 +14,7 @@
 		D77AB8652A5D51BC000A7C3D /* AVAudioPlayerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D77AB8642A5D51BC000A7C3D /* AVAudioPlayerTests.swift */; };
 		D77AB86F2A5D51BC000A7C3D /* AVAudioPlayerUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D77AB86E2A5D51BC000A7C3D /* AVAudioPlayerUITests.swift */; };
 		D77AB8712A5D51BC000A7C3D /* AVAudioPlayerUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D77AB8702A5D51BC000A7C3D /* AVAudioPlayerUITestsLaunchTests.swift */; };
+		D77AB87F2A5D552E000A7C3D /* AudioPlayerViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = D77AB87E2A5D552E000A7C3D /* AudioPlayerViewModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -44,6 +45,7 @@
 		D77AB86A2A5D51BC000A7C3D /* AVAudioPlayerUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = AVAudioPlayerUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		D77AB86E2A5D51BC000A7C3D /* AVAudioPlayerUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AVAudioPlayerUITests.swift; sourceTree = "<group>"; };
 		D77AB8702A5D51BC000A7C3D /* AVAudioPlayerUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AVAudioPlayerUITestsLaunchTests.swift; sourceTree = "<group>"; };
+		D77AB87E2A5D552E000A7C3D /* AudioPlayerViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AudioPlayerViewModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -94,6 +96,7 @@
 		D77AB8522A5D51BB000A7C3D /* AVAudioPlayer */ = {
 			isa = PBXGroup;
 			children = (
+				D77AB87D2A5D5521000A7C3D /* vViewModel */,
 				D77AB8532A5D51BB000A7C3D /* AVAudioPlayerApp.swift */,
 				D77AB8552A5D51BB000A7C3D /* ContentView.swift */,
 				D77AB8572A5D51BC000A7C3D /* Assets.xcassets */,
@@ -125,6 +128,14 @@
 				D77AB8702A5D51BC000A7C3D /* AVAudioPlayerUITestsLaunchTests.swift */,
 			);
 			path = AVAudioPlayerUITests;
+			sourceTree = "<group>";
+		};
+		D77AB87D2A5D5521000A7C3D /* vViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				D77AB87E2A5D552E000A7C3D /* AudioPlayerViewModel.swift */,
+			);
+			path = vViewModel;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -258,6 +269,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				D77AB8562A5D51BB000A7C3D /* ContentView.swift in Sources */,
+				D77AB87F2A5D552E000A7C3D /* AudioPlayerViewModel.swift in Sources */,
 				D77AB8542A5D51BB000A7C3D /* AVAudioPlayerApp.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
